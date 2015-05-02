@@ -1,13 +1,14 @@
 import tables
 import asynchttpserver, asyncdispatch
 #import circular
+import index
 
-proc index():string {.procvar.}  =
+proc home():string {.procvar.}  =
 # return circular.render("index.html")
-  return "hello"
+  return index.render("test")
 
 # circular.routes = {"/": index}.toTable()
-var routes = {"/": index}.toTable()
+var routes = {"/": home}.toTable()
 
 # circular.run()
 

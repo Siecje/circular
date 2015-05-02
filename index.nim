@@ -1,7 +1,8 @@
 import templates
-import _layout
+import layout
 
-proc render*(): string =
-  return _layout.render('index', tmpli html"""
-<strong>This is from the page<strong>
-""")
+proc render*(title: string): string =
+  tmpli html"""
+      <strong>This is from the page<strong>
+      """
+  return layout.render(title, result)
